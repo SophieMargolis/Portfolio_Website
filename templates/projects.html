@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Sophie Margolis | Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}" />
+		<link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<img src="{{ url_for('static', filename='images/avatar.jpg') }}" alt="" class="image avatar" />
+					<h1><strong>Hi, I'm Sophie</strong></h1> <h1>and I'm passionate<br />
+						about programming, data, and machine learning.<br /></h1>
+				</div>
+			</header>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- One -->
+					<section id="one">
+						<header class="major">
+							<h2>{{ project["title"] }}</h2>
+						</header>
+						<p>{{ project["intro"] }}</p>
+						<p>{{ project["p1"] }}<br>{{ project["p2"] }}<br>{{ project["p3"] }}</p>
+						<div class="project-details__tools-used">
+							<h3 class="project-details__content-title">Tools Used</h3>
+							<div class="skills">
+								{% for i in range(10) %}
+								{% if i < project.skills|length %}
+									<div class="skills__skill">{{ project["skills"][i] }}</div>
+								{% endif %}
+							{% endfor %}
+							</div><br>
+							<p>{{ project["p4"] }}</p>
+							<ul class="actions">
+								<li><a href="{{ project['link'] }}" target="_blank" class="button">View on GitHub</a></li>
+							</ul>
+						  </div>
+					</section>
+
+				<!-- Three -->
+				<section id="three">
+					<h2>Get In Touch</h2>
+						<div class="col-4 col-12-small">
+							<ul class="labeled-icons">
+								<li>
+									<h3 class="icon solid fa-mobile-alt"><span class="label">Phone</span></h3>
+									052-571-9995
+								</li>
+								<li>
+									<h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
+									<span>margolisophie@gmail.com</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<ul class="icons">
+						<li><a href="javascript:history.go(-1);" class="back-button icon solid fa-chevron-circle-left"><span class="label">Back</span></a></li>
+						<li><a href="https://www.linkedin.com/in/sophie-margolis-82163a290/" target="_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						<li><a href="https://github.com/SophieMargolis" class="icon brands fa-github"><span target="_blank" class="label">Github</span></a></li>
+						<li><a href="https://mail.google.com/mail/u/1/?view=cm&fs=1&to=margolisophie@gmail.com&tf=1" target="_blank" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+						<li><a href="https://drive.google.com/file/d/1qpMAYIeXJFrLvMYiy01bHSnkipn6egKb/view?usp=sharing" target="_blank" class="fas fa-file-alt" style="font-size:22px"><span class="label"></span></a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+        <script src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='assets/js/jquery.poptrox.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='assets/js/browser.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='assets/js/breakpoints.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='assets/js/util.js') }}"></script>
+        <script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
+
+	</body>
+</html>
