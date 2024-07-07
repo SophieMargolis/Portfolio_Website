@@ -3,4 +3,4 @@ As part of my desire to expand my programming knowledge and learn new tools and 
 
 This project was done using Flask, HTML, and CSS.
 
-<a href="https://sophiemargolis.onrender.com/">Check out my portfolio website! 🚀</a>
+<a href="https://sophiemargolis.onrender.com/">Check out my portfolio website!</a>🚀
